@@ -8,9 +8,9 @@ public class CircleTests
 	[InlineData(2, 12.57)]
 	[InlineData(1, 3.14)]
 	[InlineData(0, 0)]
-    [Theory]
-    public void Square_ShouldReturnCorrectSquare_WhenRadiusIsValid(double radius, double expectedSquare)
-    {
+	[Theory]
+	public void Square_ShouldReturnCorrectSquare_WhenRadiusIsValid(double radius, double expectedSquare)
+	{
 		//arrange
 		ISquareCalculable sut = new Circle(radius);
 
@@ -19,7 +19,7 @@ public class CircleTests
 
 		//assert
 		Math.Round(square, 2).Should().Be(expectedSquare);
-    }
+	}
 
 	[InlineData(double.MinValue)]
 	[InlineData(-1)]

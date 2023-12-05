@@ -7,7 +7,7 @@ public static class ThrowHelper
 {
 	///<exception cref="ArgumentOutOfRangeException"/>
 	public static void ThrowIfRadiusIsNegativeNumber(double radius,
-        [CallerArgumentExpression(nameof(radius))] string parameterName = "")
+		[CallerArgumentExpression(nameof(radius))] string parameterName = "")
 	{
 		if (radius < 0)
 			throw new ArgumentOutOfRangeException(parameterName, "The radius of the triangle must be zero or greater");
